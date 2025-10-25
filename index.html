@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>Перевод денег в Россию и из России в 2025 — реальные способы, ограничения, риски</title>
+  <title>Как отправить деньги в Россию и как вывести деньги из России (МИР, SWIFT, крипта, лимиты ЦБ)</title>
 
   <meta name="description"
-        content="Как отправить деньги в РФ и как вывести деньги из РФ в 2025 году: банки дружественных стран, SWIFT на оставшиеся банки, карты МИР, P2P, криптокошельки. Лимиты ЦБ, санкции, риски. Актуально на 25 октября 2025.">
+        content="Живые схемы 2025: как перевести деньги в Россию родственникам, как вывести деньги из РФ за границу, где работает карта МИР, как люди используют крипту USDT, и какие лимиты ставит ЦБ РФ.">
   <meta name="keywords"
-        content="перевод денег в россию 2025, отправить деньги в РФ, перевести деньги из россии за границу, SWIFT россия работает, карта МИР за границей, P2P обмен рубль доллар, санкции переводы" />
+        content="как перевести деньги в россию, как вывести деньги из россии, карта МИР за границей, переводы в РФ 2025, SWIFT из России, лимиты ЦБ РФ, отправить рубли, переслать евро, P2P USDT" />
 
-  <link rel="canonical" href="https://example.com/" />
+  <link rel="canonical" href="https://money-send-russia.onrender.com/" />
 
   <style>
     :root {
@@ -26,260 +26,65 @@
       --font-main: -apple-system, BlinkMacSystemFont, "Inter", "Roboto", "Segoe UI", Arial, sans-serif;
     }
     *{box-sizing:border-box;}
-
     body{
       margin:0;
-      background-color:var(--bg);
+      background:var(--bg);
       color:var(--fg);
       font-family:var(--font-main);
-      line-height:1.5;
       -webkit-font-smoothing:antialiased;
-      padding-bottom:6rem;
+      line-height:1.5;
+      padding-bottom:4rem;
     }
 
+    /* SECTION WRAPPERS */
     header{
       max-width:1200px;
       margin:0 auto;
       padding:2rem 1.5rem 1rem;
       border-bottom:1px solid var(--border);
     }
-    header .topline{
-      font-size:clamp(.7rem,.4vw,.8rem);
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      color:var(--sub);
-      display:flex;
-      flex-wrap:wrap;
-      gap:.5rem;
-      align-items:center;
-    }
-    header .flag-row{
-      display:flex;
-      align-items:center;
-      gap:.5rem;
-    }
-    header .flag-icon{
-      width:20px;
-      height:14px;
-      border-radius:2px;
-      background:#fff;
-      border:1px solid var(--border);
-      overflow:hidden;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    header .flag-icon img{
-      width:100%;
-      height:auto;
-      display:block;
-    }
-
     header h1{
-      margin:1rem 0 .5rem;
+      margin:0 0 .75rem;
       font-size:clamp(1.6rem,1.2vw + 1rem,2.4rem);
       font-weight:600;
       line-height:1.2;
-      color:var(--fg);
-      max-width:900px;
+      color:#fff;
     }
-    header h1 .ok{color:var(--ok);}
-    header h1 .risk{color:var(--accent);}
     header .lead{
-      max-width:900px;
       color:var(--sub);
-      font-size:clamp(.9rem,.2vw + .7rem,1rem);
+      max-width:900px;
+      font-size:.95rem;
       line-height:1.5;
     }
 
-    .wrapper{
+    main{
       max-width:1200px;
       margin:0 auto;
-      padding:2rem 1.5rem 0;
-      display:grid;
-      grid-template-columns:1fr;
-      gap:2rem;
-    }
-    @media(min-width:900px){
-      .wrapper{
-        grid-template-columns:minmax(0,2fr) minmax(260px,1fr);
-        align-items:start;
-      }
+      padding:2rem 1.5rem;
     }
 
     section.block{
-      background-color:var(--card);
+      background:var(--card);
       border:1px solid var(--border);
       border-radius:var(--radius);
-      padding:1.5rem 1.25rem 1rem;
+      padding:1.5rem 1.25rem;
+      margin-bottom:1rem;
     }
-    section.block + section.block{
-      margin-top:1rem;
-    }
-
-    /* Заголовок блока + иконка */
-    .block-head{
-      display:flex;
-      align-items:flex-start;
-      gap:.75rem;
-      margin-bottom:.75rem;
-      flex-wrap:wrap;
-    }
-    .icon-wrap{
-      flex-shrink:0;
-      width:48px;
-      height:48px;
-      border-radius:var(--radius);
-      border:1px solid var(--border);
-      background:#ffffff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-    }
-    .icon-wrap img{
-      max-width:60%;
-      height:auto;
-      display:block;
-    }
-
-    .block-title-area{
-      flex:1;
-      min-width:0;
-    }
-
-    .block-title-area h2{
-      margin:0 0 .5rem;
-      font-size:1.1rem;
-      line-height:1.3;
-      font-weight:600;
-      color:var(--fg);
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      gap:.5rem;
-    }
-
-    .pill-ok{
-      background:var(--ok);
-      color:#000;
-      font-size:.7rem;
-      line-height:1.2;
-      font-weight:600;
-      border-radius:999px;
-      padding:.25rem .5rem;
-    }
-    .pill-risk{
-      background:var(--accent);
-      color:#000;
-      font-size:.7rem;
-      line-height:1.2;
-      font-weight:600;
-      border-radius:999px;
-      padding:.25rem .5rem;
-    }
-
-    .meta-note{
-      font-size:.75rem;
-      line-height:1.4;
-      color:var(--sub);
+    .block h2{
       margin:0 0 1rem;
+      font-size:1.2rem;
+      font-weight:600;
+      line-height:1.3;
     }
-
     .block p,
-    .block ul{
+    .block li{
       font-size:.9rem;
       color:var(--fg);
       line-height:1.5;
       margin:0 0 .75rem;
     }
-    .block ul{padding-left:1rem;}
-    .block li{margin-bottom:.5rem;}
-
-    .subtle{
-      color:var(--sub);
-      font-size:.8rem;
-      line-height:1.4;
-      margin-top:1rem;
-      border-top:1px solid var(--border);
-      padding-top:.75rem;
-    }
-
-    aside.sidebar{
-      display:grid;
-      gap:1rem;
-      position:relative;
-    }
-    .side-card{
-      background-color:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:1rem 1rem .75rem;
-    }
-    .side-top{
-      display:flex;
-      align-items:flex-start;
-      gap:.5rem;
-      margin-bottom:.5rem;
-    }
-    .side-icon{
-      flex-shrink:0;
-      width:36px;
-      height:36px;
-      border-radius:8px;
-      border:1px solid var(--border);
-      background:#fff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-    }
-    .side-icon img{
-      max-width:70%;
-      height:auto;
-      display:block;
-    }
-    .side-card h3{
-      margin:0;
-      color:var(--fg);
-      font-size:.9rem;
-      font-weight:600;
-      line-height:1.3;
-    }
-
-    .side-card p,
-    .side-card ul{
-      font-size:.8rem;
-      line-height:1.4;
-      color:var(--fg);
-      margin:0 0 .5rem;
-    }
-
-    footer.site-foot{
-      max-width:1200px;
-      margin:3rem auto 0;
-      padding:2rem 1.5rem 4rem;
-      border-top:1px solid var(--border);
-      color:var(--sub);
-      font-size:.7rem;
-      line-height:1.4;
-    }
-
-    .tag-cloud{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.5rem;
-    }
-    .tag-cloud span{
-      font-size:.7rem;
-      color:var(--fg);
-      background:#1a1a1a;
-      border:1px solid var(--border);
-      padding:.4rem .6rem;
-      border-radius:999px;
-      line-height:1.2;
-      font-weight:500;
-      white-space:nowrap;
+    .block ul{
+      padding-left:1rem;
     }
 
     .warn-box{
@@ -288,10 +93,9 @@
       color:var(--accent);
       border-radius:var(--radius);
       padding:.75rem 1rem;
-      font-size:.8rem;
+      margin:1rem 0;
+      font-size:.85rem;
       line-height:1.4;
-      font-weight:500;
-      margin:.75rem 0 1rem;
     }
     .ok-box{
       background:#001a0c;
@@ -299,339 +103,527 @@
       color:var(--ok);
       border-radius:var(--radius);
       padding:.75rem 1rem;
-      font-size:.8rem;
+      margin:1rem 0;
+      font-size:.85rem;
       line-height:1.4;
-      font-weight:500;
-      margin:.75rem 0 1rem;
     }
 
-    a.inline-link{
-      color:var(--ok);
-      text-decoration:none;
-      border-bottom:1px solid var(--ok);
+    .highlight-list li{
+      background:#111111;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:.75rem .75rem;
+      margin-bottom:.5rem;
+      list-style:none;
+      font-size:.9rem;
+      line-height:1.45;
     }
+
+    footer{
+      max-width:1200px;
+      margin:3rem auto 0;
+      padding:1.5rem;
+      color:var(--sub);
+      border-top:1px solid var(--border);
+      font-size:.75rem;
+      line-height:1.4;
+    }
+
+    .mini-note {
+      color:var(--sub);
+      font-size:.8rem;
+      line-height:1.4;
+      border-top:1px solid var(--border);
+      padding-top:.75rem;
+      margin-top:1rem;
+    }
+
+    /* simple 2-col for "cards" with icons */
+    .methods-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));
+      gap:1rem;
+      margin-top:1rem;
+    }
+    .method-card{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:#0f0f0f;
+      padding:1rem 1rem 1rem;
+      display:flex;
+      flex-direction:column;
+      gap:.75rem;
+      min-height:230px;
+    }
+    .method-head{
+      display:flex;
+      align-items:flex-start;
+      gap:.75rem;
+    }
+    .method-icon{
+      width:40px;
+      height:40px;
+      border-radius:8px;
+      background:#fff;
+      border:1px solid var(--border);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      flex-shrink:0;
+    }
+    .method-icon img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .method-title{
+      font-size:.9rem;
+      font-weight:600;
+      line-height:1.4;
+      color:#fff;
+    }
+    .method-desc{
+      font-size:.8rem;
+      line-height:1.4;
+      color:#ccc;
+    }
+    .method-links a{
+      text-decoration:none;
+      font-size:.8rem;
+      color:#2ecc71;
+      font-weight:600;
+    }
+    .method-links a:hover{
+      color:#3dff8e;
+    }
+
+    /* table */
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin:1rem 0;
+      font-size:.85rem;
+    }
+    th,td{
+      border:1px solid var(--border);
+      padding:.6rem .8rem;
+      text-align:left;
+    }
+    th{
+      background:#1a1a1a;
+      color:var(--sub);
+      font-weight:500;
+      text-transform:uppercase;
+      font-size:.75rem;
+    }
+    tr:nth-child(even){background:#111;}
+    tr:nth-child(odd){background:#0d0d0d;}
   </style>
+
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="topline">
-      <div>ДЕНЬГИ ⇄ РФ</div>
-      <div>актуально: 25 окт 2025</div>
-      <div>санкции · SWIFT · МИР · крипто</div>
+  <!-- NAV (sticky, кликабельный) -->
+  <nav class="site-nav-wrap" style="
+    background:#000;
+    border-bottom:1px solid #2a2a2a;
+    position:sticky;
+    top:0;
+    z-index:9999;
+    font-family:-apple-system,BlinkMacSystemFont,'Inter','Roboto','Segoe UI',Arial,sans-serif;
+  ">
+    <div class="site-nav" style="
+      max-width:1200px;
+      margin:0 auto;
+      padding:1rem 1.5rem;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:1rem;
+    ">
 
-      <div class="flag-row">
-        <div class="flag-icon"><img src="./img/4.png" alt="RU"></div>
-        <div class="flag-icon"><img src="./img/5.png" alt="EU"></div>
-        <div class="flag-icon"><img src="./img/6.png" alt="US"></div>
+      <!-- Левый блок бренда -->
+      <div class="brand-col" style="
+        display:flex;
+        flex-direction:column;
+        gap:.5rem;
+        min-width:220px;
+      ">
+        <div class="brand-topline" style="
+          font-size:.7rem;
+          color:#999;
+          text-transform:uppercase;
+          letter-spacing:.08em;
+          display:flex;
+          flex-wrap:wrap;
+          gap:.5rem;
+          align-items:center;
+          line-height:1.3;
+        ">
+          <div>Деньги ⇄ РФ</div>
+          <div style="color:#2ecc71;font-weight:500;">актуально: 25 окт 2025</div>
+          <div style="color:#999;">переводы • SWIFT • МИР • крипта</div>
+
+          <div class="flag-row" style="display:flex;gap:.4rem;">
+            <div class="flag-icon" style="
+              width:20px;height:14px;border-radius:2px;
+              background:#fff;border:1px solid #2a2a2a;
+              display:flex;align-items:center;justify-content:center;overflow:hidden;
+            ">
+              <img src="./img/4.png" alt="RU" style="width:100%;height:auto;display:block;">
+            </div>
+            <div class="flag-icon" style="
+              width:20px;height:14px;border-radius:2px;
+              background:#fff;border:1px solid #2a2a2a;
+              display:flex;align-items:center;justify-content:center;overflow:hidden;
+            ">
+              <img src="./img/5.png" alt="EU" style="width:100%;height:auto;display:block;">
+            </div>
+            <div class="flag-icon" style="
+              width:20px;height:14px;border-radius:2px;
+              background:#fff;border:1px solid #2a2a2a;
+              display:flex;align-items:center;justify-content:center;overflow:hidden;
+            ">
+              <img src="./img/6.png" alt="US" style="width:100%;height:auto;display:block;">
+            </div>
+          </div>
+        </div>
+
+        <div class="brand-name" style="
+          font-size:.8rem;
+          font-weight:600;
+          color:#fff;
+          line-height:1.4;
+        ">
+          Переводы денег в Россию и из России
+        </div>
+
+        <div class="brand-note" style="
+          font-size:.7rem;
+          color:#999;
+          max-width:260px;
+          line-height:1.4;
+        ">
+          Живые схемы 2025: как люди реально шлют рубли, евро, доллары и USDT. Не реклама. Не финуслуга.
+        </div>
+      </div>
+
+      <!-- Правый блок навигации -->
+      <div class="nav-links" style="
+        display:flex;
+        flex-wrap:wrap;
+        gap:.5rem .75rem;
+        justify-content:flex-end;
+        flex:1;
+      ">
+
+        <a href="index.html" style="
+          text-decoration:none;
+          font-size:.8rem;
+          font-weight:600;
+          color:#fff;
+          background:#1a1a1a;
+          border:2px solid #2ecc71;
+          border-radius:10px;
+          padding:.6rem .8rem;
+          line-height:1.2;
+          display:inline-block;
+        ">
+          Главная
+        </a>
+
+        <a href="inbound.html" style="
+          text-decoration:none;
+          font-size:.8rem;
+          font-weight:600;
+          color:#fff;
+          background:#1a1a1a;
+          border:1px solid #555;
+          border-radius:10px;
+          padding:.6rem .8rem;
+          line-height:1.2;
+          display:inline-block;
+        ">
+          В Россию
+          <span style="color:#2ecc71;font-weight:500;">(отправить)</span>
+        </a>
+
+        <a href="outbound.html" style="
+          text-decoration:none;
+          font-size:.8rem;
+          font-weight:600;
+          color:#fff;
+          background:#1a1a1a;
+          border:1px solid #555;
+          border-radius:10px;
+          padding:.6rem .8rem;
+          line-height:1.2;
+          display:inline-block;
+        ">
+          Из России
+          <span style="color:#ff3b30;font-weight:500;">(вывести)</span>
+        </a>
+
+        <a href="mir-card.html" style="
+          text-decoration:none;
+          font-size:.8rem;
+          font-weight:600;
+          color:#fff;
+          background:#1a1a1a;
+          border:1px solid #555;
+          border-radius:10px;
+          padding:.6rem .8rem;
+          line-height:1.2;
+          display:inline-block;
+        ">
+          Карта МИР
+        </a>
+
+        <a href="crypto.html" style="
+          text-decoration:none;
+          font-size:.8rem;
+          font-weight:600;
+          color:#fff;
+          background:#1a1a1a;
+          border:1px solid #555;
+          border-radius:10px;
+          padding:.6rem .8rem;
+          line-height:1.2;
+          display:inline-block;
+        ">
+          Крипта
+        </a>
+
+        <a href="limits.html" style="
+          text-decoration:none;
+          font-size:.8rem;
+          font-weight:600;
+          color:#fff;
+          background:#1a1a1a;
+          border:1px solid #555;
+          border-radius:10px;
+          padding:.6rem .8rem;
+          line-height:1.2;
+          display:inline-block;
+        ">
+          Лимиты ЦБ
+        </a>
+
       </div>
     </div>
+  </nav>
 
-    <h1>
-      Как в 2025 году переводить деньги
-      <span class="ok">в Россию</span>
-      и выводить деньги
-      <span class="risk">из России</span> —
-      что ещё работает, какие лимиты и где тебя могут заблокировать
-    </h1>
+  <!-- HERO -->
+  <header>
+    <h1>Как в 2025 люди гонят деньги в Россию и из России на карту, на счёт, через МИР, SWIFT и крипту</h1>
 
     <div class="lead">
-      С 2022–2025 классические международные переводы в Россию и из России стали сильно ограничены:
-      SWIFT отключён у большинства банков, карты Visa/Mastercard не работают, зарубежные банки боятся санкций. 
-      Центробанк РФ держит контроль над вывозом капитала и продлевает временные ограничения на переводы за рубеж. 
-      Ниже — обзор реальных сценариев, которые люди используют прямо сейчас. Это не совет по обходу закона — это справочник рисков.
+      Это не реклама и не услуга перевода. Это обзор того, что реально используют:
+      карта МИР за границей, P2P через USDT, классический банковский SWIFT, наличка, и лимиты ЦБ РФ.
+      Материал сделан, чтобы ты понимал свои риски до того, как деньги застрянут.
     </div>
   </header>
 
-  <main class="wrapper">
+  <main>
 
-    <!-- MAIN CONTENT -->
-    <div>
+    <!-- КЛЮЧЕВЫЕ НАПРАВЛЕНИЯ -->
+    <section class="block">
+      <h2>Маршруты денег: 4 сценария 2025</h2>
 
-      <!-- BLOCK 1: В Россию -->
-      <section class="block">
-        <div class="block-head">
-          <div class="icon-wrap">
-            <!-- монетки BTC/ETH/USD -->
-            <img src="./img/2.png" alt="Crypto / money routes">
-          </div>
-          <div class="block-title-area">
-            <h2>
-              Перевод денег В Россию (из Европы, США, других стран)
-              <span class="pill-ok">частично работает</span>
-            </h2>
-            <div class="meta-note">
-              Цель: отправить деньги родственникам / оплатить услуги в РФ.  
-              Проблема: санкции, отключение многих банков РФ от SWIFT, блокировка Visa/Mastercard. 
+      <div class="methods-grid">
+
+        <!-- 1: В Россию -->
+        <div class="method-card">
+          <div class="method-head">
+            <div class="method-icon">
+              <img src="./img/4.png" alt="Флаг РФ">
+            </div>
+            <div>
+              <div class="method-title">Отправить деньги в Россию (родным / себе)</div>
+              <div class="method-desc">
+                Тебе нужно закинуть рубли в РФ? Популярно:
+                P2P через USDT → обмен → рублёвая карта внутри РФ,
+                или прямой перевод в рублях через коридор-friendly банки.
+              </div>
             </div>
           </div>
-        </div>
-
-        <p><b>1. Остаточный SWIFT через несанкционные банки.</b><br />
-          Некоторые банки, у которых ещё есть доступ к корреспондентским счетам и не под полным блоком, могут принимать международные банковские переводы.  
-          В первую очередь это бывшие «дочки» западных банков и банки в «дружественных» юрисдикциях, но доступ сужается из-за давления регуляторов ЕС/США. 
-        </p>
-
-        <div class="warn-box">
-          Риск: платёж могут не пропустить, зависнуть на комплаенсе или заморозить. Банки всё чаще отказываются гнать доллары/евро в адрес РФ, чтобы самим не попасть под санкции.
-        </div>
-
-        <p><b>2. Легальные финтех-посредники.</b><br />
-          Есть сервисы, которые берут деньги за рубежом и через свою цепочку платёжных партнёров доводят перевод до российской карты в рублях.  
-          Примерно так себя позиционируют сервисы типа SendNOW: они обещают «официально, с KYC, но дороже и с лимитами». 
-        </p>
-
-        <div class="ok-box">
-          Плюс: удобно «маме на карту Сбера».  
-          Минус: комиссия, паспорта/верификация, лимиты.
-        </div>
-
-        <p><b>3. P2P через людей / обменников.</b><br />
-          Схема «я отдаю евро/наличку за границей — в РФ твоей семье падают рубли на карту».  
-          Это быстрый неформальный обмен, но не банковская услуга. Высокие риски AML и доверия. 
-        </p>
-
-        <div class="warn-box">
-          Риск: могут спросить источник денег, особенно если сумма заметная. Это неофициально, это про доверие к человеку.
-        </div>
-
-        <p><b>4. Крипта (USDT → рубли).</b><br />
-          Популярно так: за рубежом покупают стейблкоин (USDT и т.д.), отправляют кошелёк получателю в РФ, он продаёт на P2P-площадке и получает рубли на карту.  
-          Это реально используют, когда банки не пропускают обычный перевод. 
-        </p>
-
-        <div class="warn-box">
-          Важно: крупные суммы в крипте = вопросы про происхождение средств. Это не «анонимная дырка», это след в блокчейне плюс KYC на бирже.
-        </div>
-
-        <p><b>5. Карты «МИР» (ограниченно).</b><br />
-          «МИР» — внутренняя платёжная система РФ. Раньше карту «МИР» можно было использовать в ряде «дружественных» стран.  
-          В 2024–2025 многие банки там сворачивают поддержку «МИР», потому что не хотят рисковать санкциями. 
-        </p>
-
-        <div class="warn-box">
-          Это уже не универсальный «привёз карту — снимаю рубли где хочу». Поддержка «МИР» за границей нестабильна.
-        </div>
-
-        <div class="subtle">
-          Итог: прямой перевод «с карты в ЕС → на карту в РФ» почти умер. Выжили только сложные коридоры: редкие банки, финтех-цепочки, P2P и крипта.
-        </div>
-      </section>
-
-      <!-- BLOCK 2: Из России наружу -->
-      <section class="block">
-        <div class="block-head">
-          <div class="icon-wrap">
-            <!-- SWIFT иконка -->
-            <img src="./img/7.png" alt="SWIFT">
+          <div class="method-links">
+            <a href="inbound.html">Как отправить в Россию →</a>
           </div>
-          <div class="block-title-area">
-            <h2>
-              Перевод денег ИЗ России за границу
-              <span class="pill-risk">строго ограничено</span>
-            </h2>
-            <div class="meta-note">
-              Цель: учеба, эмиграция, недвижимость, жить за пределами РФ.  
-              Проблема: валютный контроль + санкционный фильтр у принимающих банков.
+        </div>
+
+        <!-- 2: Из России -->
+        <div class="method-card">
+          <div class="method-head">
+            <div class="method-icon">
+              <img src="./img/6.png" alt="Флаг США">
+            </div>
+            <div>
+              <div class="method-title">Вывести деньги из России (вне РФ)</div>
+              <div class="method-desc">
+                SWIFT-переводы с обоснованием (учёба, аренда, лечение),
+                наличные в валюте, крипта → наличка за границей.
+                Без причины «я просто хочу увезти капитал» банки лочат.
+              </div>
             </div>
           </div>
-        </div>
-
-        <p><b>1. Коридор через «соседние» страны.</b><br />
-          Раньше схема была такая: открыть счёт в дружественной стране (Казахстан, Армения и т.д.), перегнать туда рубли, конвертировать в валюту и отправить SWIFT дальше.  
-          В 2025 это ломается: банки соседних стран боятся вторичных санкций и стали массово отказывать россиянам или жёстко запрашивать источник дохода. 
-        </p>
-
-        <div class="warn-box">
-          Открыть счёт нерезиденту стало сложнее. «Просто поехать и открыть карточку» уже не так просто.
-        </div>
-
-        <p><b>2. Прямой SWIFT из РФ (где ещё жив).</b><br />
-          Теоретически часть банков РФ всё ещё может делать исходящие переводы, если у них остались корреспондентские счета.  
-          Но Центробанк РФ продлевает временные ограничения на переводы валюты физлицами за рубеж — лимиты и доп. проверки. 
-        </p>
-
-        <div class="warn-box">
-          За рубежом деньги могут зависнуть, потому что банк-получатель может просто заблокировать платёж «из России». Даже если он легальный.
-        </div>
-
-        <p><b>3. Крипта → кэш за границей.</b><br />
-          Человек в РФ покупает стейблкоин, сам себе отправляет кошелёк, за пределами РФ продаёт его за локальную валюту.  
-          Это — реальный «живой» путь, когда банки отказывают. 
-        </p>
-
-        <div class="warn-box">
-          Но в ЕС/США крипта официально считается активом. Если ты там живёшь, налоговая захочет знать источник средств. Крупный кэш без декларации = уголовные вопросы.
-        </div>
-
-        <p><b>4. Наличный своп (cash swap).</b><br />
-          Ты отправляешь рубли партнёру в РФ, а связанный с ним партнёр за границей отдаёт тебе эквивалент в евро/долларах наличными.  
-          Это не банк, это просто люди и доверие. Очень рискованно юридически.
-        </p>
-
-        <div class="warn-box">
-          Крупная сумма может выглядеть как отмывание или обход валютного контроля. Это 100% твой личный риск.
-        </div>
-
-        <div class="subtle">
-          TL;DR: вывести большие суммы чисто и официально стало тяжело. Банки за пределами РФ боятся санкций, ЦБ РФ не хочет утечки валюты.
-        </div>
-      </section>
-
-      <!-- BLOCK 3: Что не работает -->
-      <section class="block">
-        <div class="block-head">
-          <div class="icon-wrap">
-            <!-- МИР -->
-            <img src="./img/3.png" alt="МИР">
+          <div class="method-links">
+            <a href="outbound.html">Как вывести из России →</a>
           </div>
-          <div class="block-title-area">
-            <h2>
-              Что больше НЕ работает (2025)
-              <span class="pill-risk">закрыто / нестабильно</span>
-            </h2>
-            <div class="meta-note">
-              Всё ниже — популярные «советы друзей», которые уже не живые.
+        </div>
+
+        <!-- 3: МИР -->
+        <div class="method-card">
+          <div class="method-head">
+            <div class="method-icon">
+              <img src="./img/3.png" alt="МИР">
+            </div>
+            <div>
+              <div class="method-title">Карта МИР за границей</div>
+              <div class="method-desc">
+                Карту МИР всё ещё принимают не везде.
+                Где-то ей можно снять наличку или расплатиться, где-то она просто не проходит.
+                Всё зависит от страны и партнёрских банков.
+              </div>
             </div>
           </div>
-        </div>
-
-        <p><b>Western Union, PayPal, Revolut, Wise, MoneyGram, Apple Pay / Google Pay → РФ.</b><br />
-          Эти сервисы массово ушли из России или заблокировали переводы в 2022–2024, и к 2025 не вернулись, чтобы не ловить вторичные санкции. 
-        </p>
-
-        <div class="warn-box">
-          Любой сайт, который обещает «моментальный PayPal → Сбер» в 2025, почти наверняка пытается тебя развести.
-        </div>
-
-        <p><b>«Просто привези свою карту Visa/Mastercard и снимай в РФ».</b><br />
-          Внутри России Visa/Mastercard от иностранных банков больше не обслуживаются как раньше. Карта «МИР» за рубежом — уже не гарантия: многие банки в дружественных странах отключили «МИР», опасаясь санкций. 
-        </p>
-
-        <div class="warn-box">
-          Не рассчитывай, что сможешь приехать с европейской картой и свободно платить в любом российском магазине.
-        </div>
-
-        <p><b>Стабильный «банк в соседней стране» как универсальное решение.</b><br />
-          Банки Казахстана, Армении и т.п. получили серьёзное давление по санкциям. Им проще отказать россиянину, чем объяснять регуляторам США, почему они помогают обводить ограничения. 
-        </p>
-
-        <div class="warn-box">
-          То, что работало у знакомых в 2023, может не работать у тебя в 2025. Проверяй актуальность каждый раз.
-        </div>
-
-        <div class="subtle">
-          Общий вывод: старые «лайфхаки» Telegram сгорели. Сейчас всё жёстко проверяется на происхождение денег и санкционные риски.
-        </div>
-      </section>
-
-      <!-- BLOCK 4: Чек-лист -->
-      <section class="block">
-        <div class="block-head">
-          <div class="icon-wrap">
-            <!-- Ладонь с битком -->
-            <img src="./img/1.png" alt="Checklist">
+          <div class="method-links">
+            <a href="mir-card.html">Где МИР работает сейчас →</a>
           </div>
-          <div class="block-title-area">
-            <h2>
-              Коротко: если тебе срочно нужно отправить/получить деньги
-              <span class="pill-ok">чек-лист</span>
-            </h2>
-            <div class="meta-note">
-              Это не инструкция «как обойти санкции». Это список вещей, о которых надо думать заранее.
+        </div>
+
+        <!-- 4: Крипта -->
+        <div class="method-card">
+          <div class="method-head">
+            <div class="method-icon">
+              <img src="./img/2.png" alt="Крипта">
+            </div>
+            <div>
+              <div class="method-title">Крипта как коридор (USDT, P2P)</div>
+              <div class="method-desc">
+                Очень популярно: USDT как мост.
+                Локально покупаешь/продаёшь стейблкоин и уже на месте получаешь наличные или локальный банк.
+                Но не везде это законно.
+              </div>
             </div>
           </div>
-        </div>
-
-        <ul>
-          <li><b>Бытовой перевод в РФ родственникам:</b> смотри финтех-сервисы c официальной проверкой личности, которые переводят на карту РФ за комиссию. Готовь паспорт и лимиты. </li>
-
-          <li><b>Учёба/жизнь за границей и деньги из РФ:</b> тебе понадобится документально чистый источник средств (зарплата, договор, аренда). Зарубежный банк может запросить подтверждение перед зачислением.</li>
-
-          <li><b>Крипта:</b> это не невидимость. За пределами РФ тебя могут спросить налоги и происхождение денег. </li>
-
-          <li><b>Наличный P2P:</b> быстро, но серо. Если сумма крупная — это может быть уголовкой / AML-проблемой в стране, где ты находишься.</li>
-        </ul>
-
-        <div class="warn-box">
-          Всегда думай не только «как отправить», но и «как я потом объясню происхождение этих денег банку, налоговой или миграционной службе».
-        </div>
-
-        <div class="subtle">
-          Этот сайт — обзор. Мы не делаем переводы, не берём деньги, не даём персональных финансовых или юридических советов.
-        </div>
-      </section>
-
-    </div>
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-
-      <div class="side-card">
-        <div class="side-top">
-          <div class="side-icon">
-            <img src="./img/7.png" alt="SWIFT small">
+          <div class="method-links">
+            <a href="crypto.html">Про крипту и P2P →</a>
           </div>
-          <h3>Ключевые слова (SEO)</h3>
         </div>
 
-        <p>Так нас будут искать в Гугле:</p>
-        <div class="tag-cloud">
-          <span>перевод денег в россию 2025</span>
-          <span>как отправить деньги в рф</span>
-          <span>перевод из россии за границу</span>
-          <span>карта мир за рубежом</span>
-          <span>крипта переводы россия</span>
-          <span>лимиты ЦБ РФ</span>
-        </div>
       </div>
 
-      <div class="side-card">
-        <div class="side-top">
-          <div class="side-icon">
-            <img src="./img/3.png" alt="МИР small">
-          </div>
-          <h3>Важно знать</h3>
-        </div>
+      <div class="warn-box">
+        Внимание: многие «помощники за %» действуют вне закона.  
+        Если ты отдаёшь им деньги «перевести за рубеж», у тебя нет защиты.
+      </div>
+    </section>
 
-        <ul>
-          <li>ЦБ РФ продлевает ограничения на вывоз валюты физлицами за рубеж пакетами по полгода. </li>
-          <li>Часть банков РФ ещё может принимать SWIFT, но список сужается. </li>
-          <li>Банки «соседних стран» всё чаще не хотят рисковать санкциями и отказывают россиянам. </li>
-          <li>Поддержка «МИР» за рубежом нестабильна и может отключаться внезапно. </li>
-        </ul>
+    <!-- ЛИМИТЫ ЦБ -->
+    <section class="block">
+      <h2>Лимиты ЦБ РФ: почему перевод не всегда пускают</h2>
+
+      <p>
+        Центробанк РФ после 2022 включил режим контроля вывоза капитала.
+        Для тебя это выглядит так:
+      </p>
+      <ul class="highlight-list">
+        <li><b>Большую сумму просто так не выведешь в валюте.</b> Банк спросит, зачем ты её отправляешь и кому.</li>
+        <li><b>Требуют документы.</b> Учёба, аренда жилья, лечение, содержание семьи — это считается «нормальной» причиной.</li>
+        <li><b>Даже если российский банк пропустил платёж, зарубежный банк может его заморозить.</b></li>
+      </ul>
+
+      <div class="ok-box">
+        То есть «лимит ЦБ РФ» — это не «свободный коридор».
+        Это потолок, выше которого ты точно не пройдёшь.
       </div>
 
-      <div class="side-card">
-        <div class="side-top">
-          <div class="side-icon">
-            <img src="./img/2.png" alt="Crypto icon small">
-          </div>
-          <h3>Дисклеймер</h3>
-        </div>
+      <p class="method-desc" style="margin-top:1rem;">
+        Полный разбор того, почему у тебя запросят контракт на обучение, договор аренды и бумажку «откуда деньги» —
+        в разделе «Лимиты».
+      </p>
 
-        <p>
-          Мы не проводим переводы и не берём деньги.
-          Мы описываем общую ситуацию по состоянию на 25.10.2025.
-        </p>
-        <p>
-          Любое действие — твоя ответственность. Если ты гражданин ЕС/США,
-          считай, что тебя спросят документы и налоги.
-        </p>
+      <div class="method-links">
+        <a href="limits.html">Читать про лимиты ЦБ РФ →</a>
+      </div>
+    </section>
+
+    <!-- ГДЕ БОЛЬШЕ ВСЕГО ВОПРОСОВ -->
+    <section class="block">
+      <h2>Самые частые вопросы</h2>
+
+      <div class="highlight-list" style="margin-top:1rem;">
+        <li>
+          <b>«Можно ли отправить в Россию евро, если я в ЕС?»</b><br>
+          Да, но чаще делают не прямым банковским переводом, а через обмен → рубли внутри РФ.
+          Про это: <a href="inbound.html" style="color:#2ecc71;text-decoration:none;font-weight:600;">как отправить деньги в Россию</a>.
+        </li>
+
+        <li>
+          <b>«А если я хочу просто вывести доллары из России?»</b><br>
+          Если ты скажешь банку: «просто вывожу капитал», вероятен стоп.
+          Нужна формальная причина (учёба, аренда, лечение, семья) и бумаги.
+          Про это: <a href="outbound.html" style="color:#ff3b30;text-decoration:none;font-weight:600;">как вывести деньги из РФ</a>.
+        </li>
+
+        <li>
+          <b>«МИР работает в Турции, в ОАЭ, в Сербии?»</b><br>
+          Местами — да, местами — нет, и это всё время меняется.
+          Читай: <a href="mir-card.html" style="color:#2ecc71;text-decoration:none;font-weight:600;">где карта МИР проходит</a>.
+        </li>
+
+        <li>
+          <b>«Крипта — это анонимно?»</b><br>
+          Не совсем. На входе/выходе тебя часто спрашивают KYC (паспорт) или источник денег.
+          <a href="crypto.html" style="color:#2ecc71;text-decoration:none;font-weight:600;">Как люди делают через USDT</a>.
+        </li>
+
+        <li>
+          <b>«Могут ли деньги зависнуть?»</b><br>
+          Да. И в российском банке, и в зарубежном, и на P2P.
+          В разделе <a href="limits.html" style="color:#2ecc71;text-decoration:none;font-weight:600;">лимиты ЦБ</a>
+          объясняется, почему.
+        </li>
       </div>
 
-    </aside>
+      <div class="warn-box">
+        Важно: этот сайт не переводит деньги и не берёт проценты за «помощь».
+        Это навигатор по рискам. Чтобы ты не отдал все накопления первому «курьеру».
+      </div>
+    </section>
+
+    <!-- БЛОК ПРО РИСК -->
+    <section class="block">
+      <h2>Зачем вообще всё это читать перед переводом</h2>
+
+      <p>
+        Потому что сейчас (2025):
+      </p>
+
+      <ul class="highlight-list">
+        <li>банки за рубежом могут не принять перевод из РФ и заморозить счёт получателя;</li>
+        <li>российские банки могут запросить доказать «законность денег» даже у физлица;</li>
+        <li>карта МИР иногда работает, а иногда внезапно перестаёт работать без предупреждения;</li>
+        <li>P2P крипта стала обычной, но в некоторых странах её уже начали активно мониторить.</li>
+      </ul>
+
+      <div class="ok-box">
+        Сильный ход — не искать «волшебный способ», а понимать, какой способ не убьёт тебя завтра.
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-foot">
-    <div>© 2025. Информационный ресурс. Не банк. Не платёжная система. Не призыв нарушать закон.</div>
-
-    <div style="margin-top:1rem;">
-      Если ты банк / регулятор / владелец сервиса и хочешь скорректировать данные,
-      свяжись: <span style="color:var(--fg)">compliance@example.com</span>
-    </div>
+  <footer>
+    © 2025 money-send-russia.onrender.com  
+    Информационный ресурс.  
+    Мы не переводим деньги и не продаём финансовые услуги.  
+    Этот сайт создан, чтобы человек понимал правила игры (ОГРАНИЧЕНИЯ ЦБ, SWIFT-риск, статус МИР, P2P-коридоры),  
+    прежде чем он нажмёт «отправить».
   </footer>
 
 </body>
