@@ -1,0 +1,31 @@
+# robots.txt for monsen.onrender.com
+# Last updated: 2025-10-25
+
+User-agent: *
+Allow: /
+
+# Запрещаем индексировать технические и служебные файлы
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /scripts/
+Disallow: /private/
+
+# Указываем карту сайта
+Sitemap: https://monsen.onrender.com/sitemap.xml
+
+# Дополнительные рекомендации для Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 5
+
+# Bing, Yandex и другие поисковики
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 10
+
+# Конец файла

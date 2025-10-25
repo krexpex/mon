@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Лимиты ЦБ РФ и контроль переводов за границу в 2025 году</title>
+
+  <meta name="description"
+        content="Какие действуют ограничения ЦБ РФ на переводы за границу для физлиц и компаний, почему SWIFT-платежи режут, почему требуют документы и в каких случаях деньги могут зависнуть на комплаенсе.">
+  <meta name="keywords"
+        content="лимиты ЦБ РФ перевод за границу, ограничения перевода валюты из России, сколько можно вывести из РФ, ЦБ РФ контроль капитала, SWIFT лимит россия 2025, комплаенс банк" />
+
+  <link rel="canonical" href="https://monsen.onrender.com/limits.html" />
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --fg: #ffffff;
+      --sub: #999999;
+      --accent: #ff3b30;
+      --ok: #2ecc71;
+      --border: #2a2a2a;
+      --card: #111111;
+      --radius: 12px;
+      --font-main: -apple-system, BlinkMacSystemFont, "Inter", "Roboto", "Segoe UI", Arial, sans-serif;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family:var(--font-main);
+      -webkit-font-smoothing:antialiased;
+      line-height:1.5;
+      padding-bottom:4rem;
+    }
+
+    /* NAV */
+    .site-nav-wrap{
+      background:var(--bg);
+      border-bottom:1px solid var(--border);
+    }
+    .site-nav{
+      max-width:1200px;
+      margin:0 auto;
+      padding:.75rem 1.5rem;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .brand-col{
+      display:flex;
+      flex-direction:column;
+      gap:.5rem;
+      min-width:200px;
+    }
+    .brand-topline{
+      font-size:.7rem;
+      color:var(--sub);
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem;
+      align-items:center;
+    }
+    .flag-row{display:flex;gap:.5rem;}
+    .flag-icon{
+      width:20px;
+      height:14px;
+      border-radius:2px;
+      background:#fff;
+      border:1px solid var(--border);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .flag-icon img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .brand-name{
+      font-size:.8rem;
+      font-weight:600;
+      color:var(--fg);
+    }
+    .brand-note{
+      font-size:.7rem;
+      color:var(--sub);
+      max-width:260px;
+    }
+
+    .nav-links{
+      flex:1;
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem .75rem;
+      justify-content:flex-end;
+    }
+    .nav-links a{
+      text-decoration:none;
+      font-size:.75rem;
+      color:var(--fg);
+      background:#111;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:.45rem .6rem;
+      white-space:nowrap;
+    }
+    .nav-links a:hover{
+      background:#1a1a1a;
+      border-color:var(--fg);
+    }
+    .nav-links a.active{
+      background:#999999;
+      color:#000;
+      font-weight:600;
+    }
+
+    header{
+      max-width:1200px;
+      margin:0 auto;
+      padding:2rem 1.5rem 1rem;
+      border-bottom:1px solid var(--border);
+    }
+    header h1{
+      margin:0 0 .75rem;
+      font-size:clamp(1.6rem,1.2vw + 1rem,2.4rem);
+      font-weight:600;
+      line-height:1.2;
+    }
+    header .lead{
+      color:var(--sub);
+      max-width:900px;
+      font-size:.95rem;
+      line-height:1.5;
+    }
+
+    main{
+      max-width:1200px;
+      margin:0 auto;
+      padding:2rem 1.5rem;
+    }
+
+    section.block{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:1.5rem 1.25rem;
+      margin-bottom:1rem;
+    }
+    .block h2{
+      margin:0 0 1rem;
+      font-size:1.2rem;
+      font-weight:600;
+      line-height:1.3;
+    }
+    .block p,
+    .block li{
+      font-size:.9rem;
+      color:var(--fg);
+      line-height:1.5;
+      margin:0 0 .75rem;
+    }
+    .block ul{
+      padding-left:1rem;
+    }
+
+    .warn-box{
+      background:#1a0000;
+      border:1px solid var(--accent);
+      color:var(--accent);
+      border-radius:var(--radius);
+      padding:.75rem 1rem;
+      margin:1rem 0;
+      font-size:.85rem;
+      line-height:1.4;
+    }
+    .ok-box{
+      background:#001a0c;
+      border:1px solid var(--ok);
+      color:var(--ok);
+      border-radius:var(--radius);
+      padding:.75rem 1rem;
+      margin:1rem 0;
+      font-size:.85rem;
+      line-height:1.4;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin:1rem 0;
+      font-size:.85rem;
+    }
+    th,td{
+      border:1px solid var(--border);
+      padding:.6rem .8rem;
+      text-align:left;
+    }
+    th{
+      background:#1a1a1a;
+      color:var(--sub);
+      font-weight:500;
+      text-transform:uppercase;
+      font-size:.75rem;
+    }
+    tr:nth-child(even){background:#111;}
+    tr:nth-child(odd){background:#0d0d0d;}
+
+    footer{
+      max-width:1200px;
+      margin:3rem auto 0;
+      padding:1.5rem;
+      color:var(--sub);
+      border-top:1px solid var(--border);
+      font-size:.75rem;
+      line-height:1.4;
+    }
+
+    .mini-note {
+      color:var(--sub);
+      font-size:.8rem;
+      line-height:1.4;
+      border-top:1px solid var(--border);
+      padding-top:.75rem;
+      margin-top:1rem;
+    }
+
+    .highlight-list li{
+      background:#111111;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:.75rem .75rem;
+      margin-bottom:.5rem;
+      list-style:none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav-wrap">
+    <div class="site-nav">
+      <div class="brand-col">
+        <div class="brand-topline">
+          <div>ДЕНЬГИ ⇄ РФ</div>
+          <div>актуально: 25 окт 2025</div>
+          <div>контроль капитала · лимиты ЦБ</div>
+          <div class="flag-row">
+            <div class="flag-icon"><img src="./img/4.png" alt="RU"></div>
+            <div class="flag-icon"><img src="./img/5.png" alt="EU"></div>
+            <div class="flag-icon"><img src="./img/6.png" alt="US"></div>
+          </div>
+        </div>
+        <div class="brand-name">Лимиты ЦБ РФ</div>
+        <div class="brand-note">
+          Почему переводы за рубеж ограничены, откуда берутся лимиты
+          и почему банк может попросить объяснить «откуда деньги».
+        </div>
+      </div>
+
+      <div class="nav-links">
+        <a href="inbound.html">Отправить деньги в Россию</a>
+        <a href="outbound.html">Вывести деньги из России</a>
+        <a href="mir-card.html">Карта МИР</a>
+        <a href="crypto.html">Крипта</a>
+        <a href="limits.html" class="active">Лимиты ЦБ</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Лимиты ЦБ РФ и контроль переводов за границу: как это влияет на твои деньги</h1>
+    <div class="lead">
+      После 2022 года Банк России ввёл временные ограничения на вывоз валюты за рубеж и неоднократно продлевал их.  
+      Это влияет на то, сколько валюты ты можешь отправить, в каком виде и с какими документами.  
+      Здесь — разбор того, что это значит для обычного человека в 2025 году.
+    </div>
+  </header>
+
+  <main>
+
+    <section class="block">
+      <h2>1. Что такое «лимиты ЦБ РФ» и зачем они вообще нужны</h2>
+      <p>
+        Когда ЦБ говорит «временные ограничения на трансграничные переводы», это означает:
+      </p>
+      <ul>
+        <li>Не любую сумму можно легально отправить за пределы России в валюте;</li>
+        <li>Банк в РФ обязан проверять не только сам факт перевода, но и основание перевода;</li>
+        <li>Ограничения продлеваются пакетами (обычно на несколько месяцев вперёд), а не отменяются окончательно.</li>
+      </ul>
+
+      <div class="warn-box">
+        То есть это не «разовое ЧП», это стало постоянным нормальным режимом:
+        жёсткий валютный контроль на уровне физлиц.
+      </div>
+
+      <p>
+        Причина простая: государство старается удержать валюту внутри страны и не дать гражданам массово выводить капитал за рубеж.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2>2. Почему у тебя могут запросить документы на перевод</h2>
+      <p>
+        Если ты пытаешься отправить деньги за границу через банк РФ, особенно в валюте (доллар, евро и т.д.), банк с высокой вероятностью спросит:
+      </p>
+
+      <ul class="highlight-list">
+        <li><b>Зачем перевод?</b> (учёба, аренда жилья, лечение, содержание семьи за границей и т.п.)</li>
+        <li><b>Кому именно?</b> (твоё имя за рубежом или третье лицо)</li>
+        <li><b>Документ-основание?</b> (договор аренды, счёт за обучение, справка из клиники)</li>
+        <li><b>Источник средств?</b> (зарплата, продажа имущества, сбережения)</li>
+      </ul>
+
+      <div class="ok-box">
+        Если у тебя есть официальный «повод» для перевода (контракт на обучение, медуслуги, нотариально подтверждённое содержание родственника),
+        шансы, что платёж пройдёт, намного выше.
+      </div>
+
+      <p>
+        Если повода нет и ты просто пытаешься «вывести доллары», банк может отказать.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2>3. Типовые сценарии, которые банк считает «нормальными»</h2>
+      <p>
+        На бытовом уровне легче всего объяснить перевод за границу так:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Сценарий</th>
+            <th>Что обычно просят показать</th>
+            <th>Почему это пропускают чаще</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Учёба за рубежом</b></td>
+            <td>Контракт с вузом / счёт на оплату обучения</td>
+            <td>Обоснованная платежная цель — «оплата образовательных услуг»</td>
+          </tr>
+          <tr>
+            <td><b>Аренда жилья за границей</b></td>
+            <td>Договор аренды с указанной суммой</td>
+            <td>Перевод трактуется как «оплата проживания»</td>
+          </tr>
+          <tr>
+            <td><b>Медицинская помощь</b></td>
+            <td>Счёт из клиники / приглашение на лечение</td>
+            <td>Критическая жизненная необходимость = высокий приоритет</td>
+          </tr>
+          <tr>
+            <td><b>Содержание близкого родственника</b></td>
+            <td>Документы родства + письмо/заявление назначения перевода</td>
+            <td>ЦБ допускает помощь членам семьи, но суммы могут лимитироваться</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="warn-box">
+        Всё, что выглядит как «я просто вывожу капитал» без понятной цели (недвижимость, офшор, кэш в чемодане)  
+        — это то, что чаще всего стопорят.
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>4. Почему иногда деньги доходят до зарубежного банка, но всё равно блокируются</h2>
+      <p>
+        Даже если российский банк одобрил твой SWIFT-перевод, есть второй фильтр — банк-получатель за пределами РФ.
+        И вот там может случиться следующее:
+      </p>
+      <ul>
+        <li>Платёж помечают как «высокорисковый», потому что отправитель — из России;</li>
+        <li>Деньги ставят «на удержание» (hold) на внутренних счетах банка до проверки;</li>
+        <li>Банк просит объяснить источник денег и цель перевода уже у получателя, который живёт за границей.</li>
+      </ul>
+
+      <div class="warn-box">
+        Иногда зарубежный банк просто не зачисляет перевод на счёт получателя.
+        Деньги висят на комплаенсе неделями или возвращаются назад.
+      </div>
+
+      <p>
+        Это нормальная практика не только против российских клиентов, но в целом против любых «подозрительных стран» по версии конкретного банка.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2>5. Лимит ≠ гарантия</h2>
+      <p>
+        Важно понимать психологическую ловушку:
+      </p>
+
+      <ul class="highlight-list">
+        <li><b>Лимит ЦБ</b> говорит, сколько ты вообще имеешь право попытаться отправить.</li>
+        <li><b>Банк в РФ</b> решает, готов ли он этот перевод пропустить (нужны ли документы).</li>
+        <li><b>Банк за рубежом</b> решает, будет ли он эти деньги принимать или заморозит.</li>
+      </ul>
+
+      <div class="ok-box">
+        То есть «лимит ЦБ» — это не кнопка «Гарантированно вывести деньги».
+        Это только верхняя граница, выше которой тебе точно скажут «нет».
+      </div>
+
+      <p>
+        Даже сумма внутри лимита может быть остановлена по комплаенсу, если никто не понимает происхождение денег.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2>6. Частые ошибки людей, которые пытаются вывести деньги</h2>
+      <ul class="highlight-list">
+        <li><b>Ошибка №1:</b> «Меня это не касается, я просто физлицо».  
+          На самом деле банки сейчас проверяют физлиц так же жёстко, как ИП.</li>
+
+        <li><b>Ошибка №2:</b> «Скину сразу большую сумму, чтобы не гоняться».  
+          Большой перевод без документов = красная лампа и в российском банке, и в зарубежном.</li>
+
+        <li><b>Ошибка №3:</b> «Пускай деньги придут на счёт друга за границей».  
+          Банк друга может воспринять это как подозрительный вход и заблокировать весь его счёт до выяснения.</li>
+
+        <li><b>Ошибка №4:</b> «Я сделаю через крипту, и вопросов не будет».  
+          В реальности при обналичке за границей могут спросить ту же самую вещь — источник средств и налоги.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>7. Что это значит лично для тебя</h2>
+      <p>
+        Если ты собираешься переводить деньги за пределы РФ в 2025 году, думай не только «как отправить рубли или доллары»,  
+        а «как показать, что эти деньги не серые».
+      </p>
+
+      <ul>
+        <li>Готовь документы заранее (договор аренды, учебный контракт, медсчёт и т.д.).</li>
+        <li>Не дроби большие суммы в хаотичные переводы разным людям — это выглядит как обнал/отмыв.</li>
+        <li>Не рассчитывай, что иностранный банк «не заметит», что деньги пришли из России. Заметит.</li>
+      </ul>
+
+      <div class="warn-box">
+        Финансовая реальность 2025: государству важно удерживать валюту внутри страны,  
+        а западным банкам важно не попасть под санкции.  
+        Ты зажат между этими двумя интересами.
+      </div>
+
+      <div class="ok-box">
+        Самый «чистый» путь — переводы под понятную официальную цель и с подтверждённым происхождением средств.
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025. Информационный ресурс.  
+    Не банк. Не платёжная система. Не даём индивидуальных финансовых советов.  
+    Материал предназначен для понимания рисков и ограничений, а не для обхода регулирования.
+  </footer>
+
+</body>
+</html>
